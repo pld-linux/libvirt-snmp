@@ -1,16 +1,17 @@
 Summary:	SNMP API for libvirt
 Summary(pl.UTF-8):	API SNMP do libvirt
 Name:		libvirt-snmp
-Version:	0.0.2
+Version:	0.0.3
 Release:	1
 License:	GPL v2+
 Group:		Applications/System
 Source0:	ftp://libvirt.org/libvirt/snmp/%{name}-%{version}.tar.gz
-# Source0-md5:	8fc59a917ce73bc37728c06be7c258a4
+# Source0-md5:	d471230f2d4f949185118548b2247050
 URL:		http://libvirt.org/
-BuildRequires:	libvirt-devel
+BuildRequires:	libvirt-devel >= 0.8.0
 BuildRequires:	net-snmp-devel
 BuildRequires:	pkgconfig
+Requires:	libvirt >= 0.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
