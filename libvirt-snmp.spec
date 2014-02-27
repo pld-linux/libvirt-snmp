@@ -2,7 +2,7 @@ Summary:	SNMP API for libvirt
 Summary(pl.UTF-8):	API SNMP do libvirt
 Name:		libvirt-snmp
 Version:	0.0.3
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Applications/System
 Source0:	ftp://libvirt.org/libvirt/snmp/%{name}-%{version}.tar.gz
@@ -44,5 +44,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README
 %attr(755,root,root) %{_bindir}/libvirtMib_subagent
-%{_datadir}/snmp/mibs/LIBVIRT-MIB.txt
+%{_datadir}/mibs/LIBVIRT-MIB.txt
 %{_mandir}/man1/libvirtMib_subagent.1*
