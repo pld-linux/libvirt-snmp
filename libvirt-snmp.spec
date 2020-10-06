@@ -8,10 +8,10 @@ Group:		Applications/System
 Source0:	ftp://libvirt.org/libvirt/snmp/%{name}-%{version}.tar.gz
 # Source0-md5:	e9034092c385a46224336282509c3296
 URL:		http://libvirt.org/
-BuildRequires:	libvirt-devel >= 0.8.0
+BuildRequires:	libvirt-devel >= 1.0.6
 BuildRequires:	net-snmp-devel
 BuildRequires:	pkgconfig
-Requires:	libvirt >= 0.8.0
+Requires:	libvirt >= 1.0.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,7 +28,8 @@ Pozwala to na tworzenie widoków całych platform.
 %setup -q
 
 %build
-%configure
+%configure \
+	--disable-silent-rules
 %{__make}
 
 %install
